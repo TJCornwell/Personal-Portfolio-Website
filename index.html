@@ -37,39 +37,73 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
+
+                    <!--Introduction paragraph-->
                     <p>My name is Timothy Cornwell, since I first considered going into the tech industry, I have always wanted to go into Web Developemnt or Cyber Security.
                         As this portfolio might suggest, I have chosen to pursue Web Developemnt, I have always been interested in how website operate and function ever since I 
-                        discovered the "inspect element" feature on Google Chrome. Since then, I have taken steps to prepare myself to enter the field by going to study Computer Science
+                        discovered the "inspect element" feature on Google Chrome.
+                    </p>
+                    <p>Since then, I have taken steps to prepare myself to enter the field by going to study Computer Science
                         as my Bachelor's degree at the University of Houston-Victoria. I will have completed this objective in May 2024 by earning my degree. During my time as a student I have
-                        had the opportunity to learn the necessary elements to Software Developement and coding. I first learned C++ as the introductory language, which pushed me to learning C# and Java next.
+                        had the opportunity to learn the necessary elements to Software Developement and coding. 
+                    <p>I first learned C++ as the introductory language, which pushed me to learning C# and Java next.
                         I wanted to explore other operating systems and coding languages, so I completed a Introduction to Linux course which introduced me to Bash and most importantly Python. 
                         Using Python, I have been able to practice and develope skills such as the core search and sorting algorithms. In my own time, I have practiced HTML and CSS in order to begin the journey
                         to becoming a Web Developer, and I have recently been introduced to JavaScript and have begun to explore the uses of it. To broaden my experience, I volunteered to join a team
                         to develope a web application using Blazer, Postgres, and Azure Data Studio that allows a user to view stream data pulled from sources such as the organization's website, facebook, and other sources.
-                        This project is still ongoing, however, I have learned alot about the uses of Blazer and the utility of C#, SQL, and scripting. I aim to become a FullStack developer, and I am eager and excited for the journey
+                        sThis project is still ongoing, however, I have learned alot about the uses of Blazer and the utility of C#, SQL, and scripting. I aim to become a FullStack developer, and I am eager and excited for the journey
                         to completing this goal.
                     </p>
+
+                    <!--About Tabs-->
                     <div class="tab-titles">
-                        <p class="tab-links active-link" >Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                             <li><span>Software Developement</span><br>Designing and Developing Software Applications</li>
                         </ul>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>University of Houston-Victoria</span><br>Web/App interfaces</li>
-                            <li><span>Software Developement</span><br>Designing and Developing Software Applications</li>
+                            <li><span>2023 - Present</span><br>AV Assistant</li>
+                            <li><span>2022 - 2023</span><br>IT Help Desk Specialist</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>May 2024</span><br>BS from Univeristy of Houston-Victoria</li>
+                            <li><span>2019 - 2021</span><br>Liberty University</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--JS for About Tab changes-->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname)
+        {
+            
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");   
+            }
+            for (tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 
 </body>
 

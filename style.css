@@ -135,3 +135,13 @@ nav ul li a:hover::after{
     color: hsl(300, 100%, 50%);
     font-size: 14px;
 }
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+p {
+    text-indent: 25px;
+}
