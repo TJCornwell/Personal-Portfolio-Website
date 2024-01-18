@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timothy Cornwell Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d4b180fb45.js" crossorigin="anonymous"></script>
 </head>
 
-<!--Header Section-->
+<!------Header Section------>
 <body id="header">
     <div class="container">
         <nav>
             <ul>
-                <!-- <img src="" class="logo>"-->
+                <!------ <img src="" class="logo>"------>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
@@ -28,25 +29,26 @@
     </div>
 
 
-    <!--About Section-->
+    <!------About Section------>
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <!-- <img src="">-->
+                    <!------ <img src=""> ------>
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
 
                     <!--Introduction paragraph-->
-                    <p>My name is Timothy Cornwell, since I first considered going into the tech industry, I have always wanted to go into Web Developemnt or Cyber Security.
+                    <p id="intro">My name is Timothy Cornwell, since I first considered going into the tech industry, I have always wanted to go into Web Developemnt or Cyber Security.
                         As this portfolio might suggest, I have chosen to pursue Web Developemnt, I have always been interested in how website operate and function ever since I 
                         discovered the "inspect element" feature on Google Chrome.
                     </p>
-                    <p>Since then, I have taken steps to prepare myself to enter the field by going to study Computer Science
+                    <p id="intro">Since then, I have taken steps to prepare myself to enter the field by going to study Computer Science
                         as my Bachelor's degree at the University of Houston-Victoria. I will have completed this objective in May 2024 by earning my degree. During my time as a student I have
                         had the opportunity to learn the necessary elements to Software Developement and coding. 
-                    <p>I first learned C++ as the introductory language, which pushed me to learning C# and Java next.
+                    </p>
+                    <p id="intro">I first learned C++ as the introductory language, which pushed me to learning C# and Java next.
                         I wanted to explore other operating systems and coding languages, so I completed a Introduction to Linux course which introduced me to Bash and most importantly Python. 
                         Using Python, I have been able to practice and develope skills such as the core search and sorting algorithms. In my own time, I have practiced HTML and CSS in order to begin the journey
                         to becoming a Web Developer, and I have recently been introduced to JavaScript and have begun to explore the uses of it. To broaden my experience, I volunteered to join a team
@@ -55,7 +57,7 @@
                         to completing this goal.
                     </p>
 
-                    <!--About Tabs-->
+                    <!------About Tabs------>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -84,7 +86,29 @@
         </div>
     </div>
 
-    <!--JS for About Tab changes-->
+    <!------Services----->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developement</h2>
+                    <p>Design and Developement of Web pages and functions.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Developement</h2>
+                    <p>Design and Developement of applications and functions.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------JS for About Tab changes------>
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
